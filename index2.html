@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 800px;
+        }
+        .esconder {
+            display: none;
+        }
+        button {
+            display: block;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <p id="p01" class="">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id lacinia ligula,
+         vel luctus turpis. Praesent condimentum erat arcu. Maecenas interdum est et ipsum mattis,
+          non tincidunt turpis tempus. Praesent sollicitudin tortor eu neque dapibus, non finibus est hendrerit.
+    </p>
+    <button id="btn1">ESCONDER 01</button>
+    <p id="p02" class="">
+           Donec elit nisi, elementum vitae turpis vitae, malesuada feugiat dolor. Morbi rutrum leo erat, vitae tristique
+            ante bibendum in. Aliquam erat volutpat. Maecenas purus est, ornare a erat sed, iaculis convallis erat. Suspendisse
+             cursus varius metus, congue posuere neque feugiat ac. Nunc laoreet rhoncus dui a semper. Sed egestas finibus orci sit
+              amet condimentum. Nullam tincidunt justo maximus risus elementum lacinia. Mauris fermentum est nibh, ut rutrum mauris
+               tincidunt vel. Vivamus egestas ut nibh sit amet condimentum.
+    </p>
+    <button id="btn2">ESCONDER 02</button>
+    <p id="p03" class="">
+Cras porttitor dignissim erat eget imperdiet. Etiam elit dolor, dictum a consectetur a,
+ egestas in mi. Fusce quis tellus ornare, egestas urna et, condimentum nunc. Nulla suscipit
+  varius malesuada. Donec consequat ipsum sit amet dolor sollicitudin, ac pretium tortor efficitur.
+   Ut pretium erat a orci scelerisque semper vel quis diam. Vivamus rutrum sem nec lacus eleifend venenatis.
+    Cras rutrum enim eu felis ullamcorper dapibus. Cras ac ante quam. Mauris ac mauris ac arcu feugiat sollicitudin quis
+     porta ex. Curabitur a vestibulum sem, vitae hendrerit lacus. Proin consequat, mauris vel finibus finibus, sapien nunc
+      feugiat purus, id dignissim urna mi eget justo.
+    </p>
+    <button id="btn3">ESCONDER 03</button>
+    <p id="p04" class="">
+Mauris sit amet convallis sem. Praesent pretium porta metus, et finibus lorem tempus vitae. Fusce non tortor
+ placerat arcu aliquet mattis. Morbi eu lobortis dui. Morbi pulvinar neque malesuada justo rutrum, sollicitudin
+  vehicula massa porttitor. Nunc feugiat mi enim, et pulvinar leo laoreet et. Pellentesque feugiat eu ante id cursus.
+   Nunc turpis leo, tincidunt eu congue eget, euismod eget massa. Suspendisse maximus elit at velit vehicula venenatis.
+    Nullam lacinia metus lacus, sit amet mattis odio dictum imperdiet. Praesent fringilla mauris justo. Fusce accumsan elit
+     mauris, non maximus nulla pulvinar nec.
+    </p>
+    <button id="btn4">ESCONDER 04</button>
+
+
+    <script>
+
+
+        esconderTexto("btn1", "01")
+        esconderTexto("btn2", "02")
+        esconderTexto("btn3", "03")
+        esconderTexto("btn4", "04")
+
+        //colocar os parametros em formato "btn" , "numero do id"
+        function esconderTexto(idBotao, idDoTexto) {
+            let botao = document.querySelector(`#${idBotao}`)
+            botao.addEventListener("click", () => {
+                document.querySelector(`#p${idDoTexto}`).classList.toggle("esconder")
+                if(botao.innerHTML === `ESCONDER ${idDoTexto}`) {
+                return botao.innerHTML = `MOSTRAR ${idDoTexto}`
+                }
+                if(botao.innerHTML === `MOSTRAR ${idDoTexto}`) {
+                return botao.innerHTML = `ESCONDER ${idDoTexto}`
+                }
+            })
+        }
+
+
+    </script>
+</body>
+</html>
