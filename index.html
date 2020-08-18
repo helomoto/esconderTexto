@@ -60,15 +60,39 @@ Mauris sit amet convallis sem. Praesent pretium porta metus, et finibus lorem te
 
         btn1.addEventListener("click", () => {
             document.querySelector("#p01").classList.toggle("esconder")
+            if(btn1.innerHTML === "ESCONDER 1") {
+               return btn1.innerHTML = "MOSTRAR 1"
+            }
+            if(btn1.innerHTML === "MOSTRAR 1") {
+               return btn1.innerHTML = "ESCONDER 1"
+            }
         })
         btn2.addEventListener("click", () => {
             document.querySelector("#p02").classList.toggle("esconder")
+            if(btn2.innerHTML === "ESCONDER 2") {
+               return btn2.innerHTML = "MOSTRAR 2"
+            }
+            if(btn2.innerHTML === "MOSTRAR 2") {
+               return btn2.innerHTML = "ESCONDER 2"
+            }
         })
         btn3.addEventListener("click", () => {
             document.querySelector("#p03").classList.toggle("esconder")
+            if(btn3.innerHTML === "ESCONDER 3") {
+               return btn3.innerHTML = "MOSTRAR 3"
+            }
+            if(btn3.innerHTML === "MOSTRAR 3") {
+               return btn3.innerHTML = "ESCONDER 3"
+            }
         })
         btn4.addEventListener("click", () => {
             document.querySelector("#p04").classList.toggle("esconder")
+            if(btn4.innerHTML === "ESCONDER 4") {
+               return btn4.innerHTML = "MOSTRAR 4"
+            }
+            if(btn4.innerHTML === "MOSTRAR 4") {
+               return btn4.innerHTML = "ESCONDER 4"
+            }
         })
 
 
